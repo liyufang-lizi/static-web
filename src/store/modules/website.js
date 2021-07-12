@@ -1,8 +1,9 @@
 const website = {
   state: {
     websiteInfo: {
-      websiteName: 'ubios社区',
-      websiteLogo: ''
+      websiteName: '社区',
+      websiteLogo: '',
+      imageUrlPre: 'https://github.com/liyufang-lizi/images-data/raw/master/'
     }
   },
   mutations: {

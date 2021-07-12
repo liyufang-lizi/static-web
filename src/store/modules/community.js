@@ -8,7 +8,7 @@ const community = {
       }, {
         id: 1,
         com_type: 'img',
-        com_content: 'organization_chart-0.jpg'
+        com_content: 'organization_chart_0'
       }, {
         id: 2,
         com_type: 'text',
@@ -16,7 +16,7 @@ const community = {
       }, {
         id: 3,
         com_type: 'img',
-        com_content: 'organization_chart-2.jpg'
+        com_content: 'organization_chart_1'
       }
     ]
   },

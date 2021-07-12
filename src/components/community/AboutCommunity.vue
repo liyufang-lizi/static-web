@@ -6,8 +6,7 @@
     <ul class="contain-text" :data="aboutCommunityList">
       <li class="contain-item" v-for="item in aboutCommunityList" :key="item.id">
         <p v-if="item.com_type === 'text'">{{ item.com_content }}</p>
-        <!-- <img v-else :src="'../../../static/image/' + item.com_content" :alt="item.com_content"> -->
-        <img v-else :src="'https://github.com/liyufang-lizi/images-data/raw/master/' + item.com_content" :alt="item.com_content">
+        <img v-else :src="websiteInfo.imageUrlPre + item.com_content + '_hengban.jpg'" :alt="item.com_content">
       </li>
     </ul>
   </div>
@@ -23,16 +22,14 @@ export default {
   },
   computed: {
     ...mapGetters({
-      aboutCommunityList: 'about_community'
+      aboutCommunityList: 'about_community',
+      websiteInfo: 'websiteInfo'
     })
   }
 }
 </script>
 
 <style scoped>
-/*
-https://github.com/liyufang-lizi/images-data/raw/master/about_community_introduce.png
-*/
 .contain {
   box-sizing: border-box;
   padding: 0 10vw;
@@ -54,9 +51,15 @@ li.contain-item {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 12px 20px;
+  margin: 12px 0;
 }
 li.contain-item p {
-  text-indent: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 2em;
+  text-indent: 2em;
+  text-align: justify;
 }
 </style>

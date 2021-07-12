@@ -5,7 +5,7 @@
         <div class="nav-box">
           <div class="nav-logo">
             <!-- <img src="" alt="" srcset=""> -->
-            <span style="font-weight: 700;font-size: 32px;">社区logo</span>
+            <span style="font-weight: 700;font-size: 32px;">{{ websiteInfo.websiteName }}</span>
           </div>
           <ul class="nav-list">
             <li v-for="item in navList" :key="item.filename">
@@ -63,7 +63,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      navList: 'navInfo'
+      navList: 'navInfo',
+      websiteInfo: 'websiteInfo'
     })
   }
 }
