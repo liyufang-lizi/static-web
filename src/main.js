@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+import './style/reset.css'
+import './style/animate.css'
+
 // Vue.config.productionTip = false
 // import the new composition api in order to make it work in Vue@2.x
 import VueComp from '@vue/composition-api'

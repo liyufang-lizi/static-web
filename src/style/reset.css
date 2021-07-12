@@ -46,3 +46,6 @@ button:hover{
   border-bottom: 1px solid #ededed;
   background: #E7EAED;
 }
+ul li, ol li{
+	list-style: none;
+}

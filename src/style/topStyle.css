@@ -5,6 +5,7 @@ header{
   left: 0;
   z-index: 2;
   background: #ffffff;
+  box-shadow: 0 4px 10px 0 #e0dede;
 }
 .top-nav {                                                                                                                                                                                                         
   height: 80px;

@@ -76,10 +76,6 @@ section {
   width: 100%;
   min-height: calc(100vh - 360px);
   background: rgb(230, 231, 230);
-  /* box-sizing: border-box; */
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
   position: relative;
   top: 80px;
 }

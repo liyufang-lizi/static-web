@@ -13,7 +13,7 @@ const nav = {
         children: [{
           id: 0,
           name: '关于社区',
-          filename: 'abput_community',
+          filename: 'about_community',
           parent_id: 1
         }, {
           id: 1,
