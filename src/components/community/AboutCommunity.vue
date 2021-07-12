@@ -6,7 +6,7 @@
     <ul class="contain-text" :data="aboutCommunityList">
       <li class="contain-item" v-for="item in aboutCommunityList" :key="item.id">
         <p v-if="item.com_type === 'text'">{{ item.com_content }}</p>
-        <img v-else :src="websiteInfo.imageUrlPre + item.com_content + '_hengban.jpg'" :alt="item.com_content">
+        <img v-else :src="websiteInfo.imageUrlPre + item.com_content + '_hengban.jpg'" :alt="item.com_content + '_hengban.jpg'">
       </li>
     </ul>
   </div>
@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     ...mapGetters({
-      aboutCommunityList: 'about_community',
+      aboutCommunityList: 'aboutCommunity',
       websiteInfo: 'websiteInfo'
     })
   }

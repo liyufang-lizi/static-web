@@ -1,6 +1,6 @@
 <template>
   <div class="content">   <!-- #5118ac -->
-    <SpringCalendar year="2021" default-type="month" color="#0366d6" show="month" :events="events" locale="ml" start-of-week="0" :labels-config="config" />
+    <SpringCalendar year="2021" default-type="month" color="#A9A9A9" show="month" :events="events" locale="ml" start-of-week="0" :labels-config="config" />
   </div>
 </template>
 
@@ -50,8 +50,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* .content>div{
-  width: 1200px;
-  height: 980px;
-} */
+
 </style>

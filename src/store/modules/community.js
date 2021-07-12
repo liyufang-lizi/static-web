@@ -1,6 +1,6 @@
 const community = {
   state: {
-    about_community: [
+    aboutCommunity: [
       {
         id: 0,
         com_type: 'text',
@@ -21,13 +21,13 @@ const community = {
     ]
   },
   mutations: {
-    SET_ABOUT_COMMUNITY (state, about_community) {
-      state.about_community = about_community
+    SET_ABOUT_COMMUNITY (state, aboutCommunity) {
+      state.aboutCommunity = aboutCommunity
     }
   },
   action: {
-    SetAboutCommunity ({commit}, about_community) {
-      commit('SET_ABOUT_COMMUNITY', about_community)
+    SetAboutCommunity ({commit}, aboutCommunity) {
+      commit('SET_ABOUT_COMMUNITY', aboutCommunity)
     }
   }
 }
