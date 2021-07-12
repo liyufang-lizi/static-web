@@ -6,7 +6,8 @@
     <ul class="contain-text" :data="aboutCommunityList">
       <li class="contain-item" v-for="item in aboutCommunityList" :key="item.id">
         <p v-if="item.com_type === 'text'">{{ item.com_content }}</p>
-        <img v-else :src="'../../../static/image/' + item.com_content" :alt="item.com_content">
+        <!-- <img v-else :src="'../../../static/image/' + item.com_content" :alt="item.com_content"> -->
+        <img v-else :src="'https://github.com/liyufang-lizi/images-data/raw/master/' + item.com_content" :alt="item.com_content">
       </li>
     </ul>
   </div>
@@ -29,6 +30,9 @@ export default {
 </script>
 
 <style scoped>
+/*
+https://github.com/liyufang-lizi/images-data/raw/master/about_community_introduce.png
+*/
 .contain {
   box-sizing: border-box;
   padding: 0 10vw;
