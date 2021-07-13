@@ -3,7 +3,7 @@ const website = {
     websiteInfo: {
       websiteName: '社区',
       websiteLogo: '',
-      imageUrlPre: 'https://github.com/liyufang-lizi/images-data/raw/master/'
+      imageUrlPre: 'https://github.com/liyufang-lizi/static-web/raw/gh-pages/static/image/' // 'https://github.com/liyufang-lizi/images-data/raw/master/'
     }
   },
   mutations: {
