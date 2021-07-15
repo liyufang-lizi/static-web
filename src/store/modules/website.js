@@ -1,8 +1,8 @@
 const website = {
   state: {
     websiteInfo: {
-      websiteName: '社区',
-      websiteLogo: '',
+      websiteName: '开源社区',
+      websiteLogo: 'logo.png',
       imageUrlPre: 'https://github.com/liyufang-lizi/static-web/raw/gh-pages/static/image/', // 'https://github.com/liyufang-lizi/images-data/raw/master/'
       communityIntroduceImg: 'community_introduce.png'
     }

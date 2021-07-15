@@ -23,22 +23,22 @@ const community = {
       {
         id: 0,
         key_words: '开放',
-        key_content: '坚持打造代码开源，民主开放的社区'
+        key_content: '打造代码开源，民主开放的社区'
       }, {
         id: 1,
         key_words: '尊重',
-        key_content: '社区成员必须相互尊重，共同遵守社区行为准则'
+        key_content: '成员相互尊重，共同遵守社区行为准则'
       }, {
         id: 2,
         key_words: '互助',
-        key_content: '鼓励社区成员互帮互助，构建和谐社区氛围'
+        key_content: '成员互帮互助，构建和谐社区氛围'
       }, {
         id: 3,
         key_words: '创新',
-        key_content: '鼓励BIOS技术相关创新'
+        key_content: '鼓励技术创新，繁荣固件软件生态'
       }
     ],
-    communityContent: '欢迎访问XXX社区，XX是由固件产业创新技术联盟下属开源工作组所创建的国内开源社区。XX专注于BIOS技术研究和分享，致力于打造一个自由平等活跃的BIOS开发者生态圈，通过开源互助的形式，共同推动国内BIOS技术的发展和创新。'
+    communityContent: '欢迎访问XX社区，XX是由固件产业创新技术联盟下属开源工作组所创建的国内开源社区。XX专注于固件技术研究和分享，致力于打造一个自由平等活跃的固件开发者生态圈，通过开源互助的形式，共同推动国内固件技术的发展和创新。'
   },
   mutations: {
     SET_ABOUT_COMMUNITY (state, aboutCommunity) {

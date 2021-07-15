@@ -52,7 +52,7 @@
     <div class="secction community">
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-3">
-          <img :src="websiteInfo.imageUrlPre + 'home/' + websiteInfo.communityIntroduceImg" alt="社区介绍版本">
+          <img style="width:100%;" :src="websiteInfo.imageUrlPre + 'home/' + websiteInfo.communityIntroduceImg" alt="社区介绍版本">
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9">
           <div class="community-content" :data="communityContent">

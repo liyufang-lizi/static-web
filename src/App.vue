@@ -10,7 +10,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">社区名称</a>
+          <img :src="websiteInfo.imageUrlPre + websiteInfo.websiteLogo" alt="">
+          <a class="navbar-brand" href="#">{{ websiteInfo.websiteName }}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
