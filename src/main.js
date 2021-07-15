@@ -4,6 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import $ from 'jQuery'
+
+import '../static/bootstrap/css/bootstrap.min.css'
+import '../static/bootstrap/css/bootstrap-theme.min.css'
+import '../static/bootstrap/js/bootstrap.min.js'
+
+import '../static/swiper/swiper-bundle.min.js'
+import '../static/swiper/swiper-bundle.min.css'
 
 import './style/reset.css'
 import './style/animate.css'
@@ -19,6 +27,7 @@ new Vue({
   el: '#app',
   router,
   store,
+  $,
   components: { App },
   template: '<App/>'
 })

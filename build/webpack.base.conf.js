@@ -3,6 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const webpack = require("webpack")
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -49,7 +50,8 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
+        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')],
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -77,6 +79,13 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('common.js'),
+    new webpack.ProvidePlugin({
+      jQuery: "jQuery",
+      $: "jQuery"
+    })
+  ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
