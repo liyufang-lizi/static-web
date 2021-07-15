@@ -14,7 +14,7 @@
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <div class="carousel-caption image-introduce-0">
-              社区板块
+              <!-- 社区板块 -->
             </div>
           </div>
           <div class="item">
@@ -31,7 +31,7 @@
           </div>
           <div class="item">
             <div class="carousel-caption image-introduce-2">
-              会议板块
+              <!-- 会议板块 -->
             </div>
           </div>
         </div>

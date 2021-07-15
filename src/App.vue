@@ -10,8 +10,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img :src="websiteInfo.imageUrlPre + websiteInfo.websiteLogo" alt="">
-          <a class="navbar-brand" href="#">{{ websiteInfo.websiteName }}</a>
+          <a class="navbar-brand" href="#">
+            <img :src="websiteInfo.imageUrlPre + websiteInfo.websiteLogo" alt="">
+            {{ websiteInfo.websiteName }}
+          </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -90,5 +92,14 @@ section {
   background: rgb(230, 231, 230);
   position: relative;
   top: 50px;
+}
+a.navbar-brand {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+a.navbar-brand>img{
+  width: 50px;
+  margin-right: 20px;
 }
 </style>
