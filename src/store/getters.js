@@ -1,7 +1,7 @@
 // import { setMaxListeners } from "node-notifier"
 
 /**
- * 全局响应数据防止位置
+ * 全局响应数据放置位置
  */
 const getters = {
   websiteInfo: state => state.website.websiteInfo,
