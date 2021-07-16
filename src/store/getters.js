@@ -8,6 +8,7 @@ const getters = {
   navInfo: state => state.nav.navInfo,
   // aboutCommunity: state => state.community.aboutCommunity,
   introduceKey: state => state.community.introduceKey,
-  communityContent: state => state.community.communityContent
+  communityContent: state => state.community.communityContent,
+  projectInfo: state => state.project.projectInfo
 }
 export default getters

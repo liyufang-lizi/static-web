@@ -22,7 +22,7 @@ const nav = {
       {
         id: 3,
         name: '项目',
-        filename: 'project',
+        filename: 'project_list',
         children: []
       },
       {

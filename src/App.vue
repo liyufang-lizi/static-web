@@ -10,7 +10,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#/home">
             <img :src="websiteInfo.imageUrlPre + websiteInfo.websiteLogo" alt="">
             {{ websiteInfo.websiteName }}
           </a>
@@ -21,7 +21,7 @@
           <ul class="nav navbar-nav">
             <li v-for="item in navList" :key="item.filename">
               <a v-if="item.children.length === 0" :href="'#/' + item.filename" :id="item.fliename">{{ item.name }}</a>
-              <a v-else :href="'#/' + item.filename" :id="item.fliename" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <!-- <a v-else :href="'#/' + item.filename" :id="item.fliename" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 {{ item.name }}
                 <span class="caret"></span>
               </a>
@@ -30,7 +30,7 @@
                   <a v-if="ite.filename === 'apply_issue'" href="https://gitee.com/unibios/proposal/tree/master" target="_blank">{{ ite.name }}</a>
                   <a v-else :href="'#/' + ite.filename" :id="ite.fliename">{{ ite.name }}</a>
                 </li>
-              </ul>
+              </ul> -->
             </li>
           </ul>
           <form class="navbar-form navbar-right">
@@ -99,7 +99,7 @@ a.navbar-brand {
   align-items: center;
 }
 a.navbar-brand>img{
-  width: 50px;
+  height: 48px;
   margin-right: 20px;
 }
 </style>
