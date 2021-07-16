@@ -11,6 +11,11 @@
         <a :href="projectInfo.applyProUrl" style="width: 120px;" class="btn btn-primary active" role="button" target="_blank">申请新项目</a>
       </div>
     </div>
+    <div class="project-list" :data="projectInfo.listData">
+      <div class="project-item row" v-for="item in projectInfo.listData" :key="item.id">
+        {{ item.project_name }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,14 +38,13 @@ export default {
 </script>
 
 <style scoped>
-.project-introduce{
+.project-introduce.row {
+  margin: 0;
+  background: #ffffff;
   box-sizing: border-box;
   padding: 20px 10vw;
 }
-.project-introduce.row{
-  margin: 0;
-}
-.project-title{
+.project-title {
   width: 100%;
   font-size: 18px;
   font-weight: 700;
@@ -49,8 +53,9 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: #ffffff;
 }
-.project-introduce>div{
+.project-introduce>div {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -58,7 +63,14 @@ export default {
   box-sizing: border-box;
   padding: 20px;
 }
-.project-introduce>div>img{
-  width: 100%;
+.project-introduce>div>img {
+  width: 80%;
+}
+.project-list {
+  box-sizing: border-box;
+  padding: 20px 10vw;
+}
+.project-item.row {
+  margin: 0;
 }
 </style>

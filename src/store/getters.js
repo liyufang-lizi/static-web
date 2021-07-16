@@ -5,6 +5,7 @@
  */
 const getters = {
   websiteInfo: state => state.website.websiteInfo,
+  organizationInfo: state => state.website.organizationInfo,
   navInfo: state => state.nav.navInfo,
   // aboutCommunity: state => state.community.aboutCommunity,
   introduceKey: state => state.community.introduceKey,

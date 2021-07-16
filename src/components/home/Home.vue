@@ -63,9 +63,11 @@
     </div>
 
     <!-- 组织架构板块 -->
-    <div class="secction meeting">
-      <div>
-        组织架构
+    <div class="secction organization">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <img style="width:100%;" :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构">
+        </div>
       </div>
     </div>
 
@@ -84,7 +86,8 @@ export default {
     ...mapGetters({
       introduceKeyData: 'introduceKey',
       communityContent: 'communityContent',
-      websiteInfo: 'websiteInfo'
+      websiteInfo: 'websiteInfo',
+      organizationInfo: 'organizationInfo'
     })
   }
 }
