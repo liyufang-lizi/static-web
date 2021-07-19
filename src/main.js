@@ -10,9 +10,6 @@ import '../static/bootstrap/css/bootstrap.min.css'
 import '../static/bootstrap/css/bootstrap-theme.min.css'
 import '../static/bootstrap/js/bootstrap.min.js'
 
-// import '../static/swiper/swiper-bundle.min.js'
-// import '../static/swiper/swiper-bundle.min.css'
-
 import './style/reset.css'
 import './style/animate.css'
 
