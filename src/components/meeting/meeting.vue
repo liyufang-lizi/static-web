@@ -3,27 +3,49 @@
     <!-- 会议纪要 -->
     <div class="meeting-summary row">
       <div class="col-xs-12 col-sm-4 col-md-4">
-        <full-calendar :events="monthData" class="test-fc" first-day='1' locale="fr"
+        <!-- <full-calendar :events="monthData" class="test-fc" first-day='1' locale="fr"
           @changeMonth="changeMonth"
           @eventClick="eventClick"
           @dayClick="dayClick"
           @moreClick="moreClick">
-        </full-calendar>
+        </full-calendar> -->
+        <Calendar
+          :sundayStart="true"
+          :markDate="meetingInfo.meetingDateData"
+        ></Calendar>
+        <!--
+          // v-on:choseDay="clickDay"
+          // v-on:changeMonth="changeDate"
+          // v-on:isToday="clickToday"
+          // :markDate=arr // arr=['2018/4/1','2018/4/3'] 标记4月1日和4月3日 简单标记
+          //:markDateMore=arr // 多种不同的标记
+          // 第一个标记和第二个标记不能同时使用
+          // :agoDayHide='1514937600' //某个日期以前的不允许点击  时间戳10位
+          // :futureDayHide='1525104000' //某个日期以后的不允许点击  时间戳10位
+          // :sundayStart="true" //默认是周一开始 当是true的时候 是周日开始
+         -->
       </div>
       <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="jump-btn row">
-          <a href="#" style="width: 120px;" class="btn btn-primary active" role="button" target="_blank">会议议题申请</a>
+          <a :href="meetingInfo.applyMeetingUrl" style="width: 120px;" class="btn btn-primary active" role="button" target="_blank">会议议题申请</a>
         </div>
         <div class="meeting-list row">
           <div class="panel panel-default">
-            <ul>
-              <li>日期标记事件</li>
-              <!-- <li v-for="event in selectDay.events"
-                :key="event"
-                v-show="event.isShow" :class="event.cssClass"
-                @click="dayClick(event,$event)">
-                {{event.content ? event.content: event.title}}
-              </li> -->
+            <ul :data="meetingInfo.meetingListData">
+              <li class="meeting-item" v-for="item in meetingInfo.meetingListData" :key="item.id">
+                <div class="meeting-date row">
+                  {{ item.meetingDate }}
+                </div>
+                <div class="meeting-content row">
+                  <div class="meeting-con-item row" v-for="ite in item.meetingContent" :key="ite.index">
+                    <div class="date-time col-xs-1 col-sm-1 col-md-1">{{ ite.meetingTime }}</div>
+                    <div class="meeting-con-ite col-xs-11 col-sm-11 col-md-11">
+                      <h4>{{ ite.conferenceTheme }}</h4>
+                      <p>{{ ite.meetingSummary }}</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -33,72 +55,24 @@
 </template>
 
 <script>
-import FullCalendar from '../../assets/vue-fullcalendar/fullCalendar.vue'
+// import FullCalendar from '../../assets/vue-fullcalendar/fullCalendar.vue'
+import Calendar from '../../assets/vue-calendar-component/index'
+import {mapGetters} from 'vuex'
 export default {
   components: {
     // FullCalendar
-    'full-calendar': FullCalendar
+    // 'full-calendar': FullCalendar
+    Calendar
   },
   data () {
-    return {
-      monthData: [
-        {
-          title: 'eeeeeeeee',
-          start: '2021-07-03',
-          end: '2021-07-03',
-          cssClass: 'red'
-        },
-        {
-          title: 'sssss',
-          start: '2021-07-25',
-          end: '2021-07-26',
-          cssClass: 'blue'
-        },
-        {
-          title: 'dddddddd',
-          start: '2021-07-09',
-          end: '2021-07-10',
-          cssClass: 'blue'
-        },
-        {
-          title: 'cccccc',
-          start: '2021-07-09',
-          end: '2021-07-20',
-          cssClass: 'red'
-        },
-        {
-          title: 'aaaaaa',
-          start: '2021-07-01',
-          end: '2021-07-01',
-          cssClass: 'red'
-        },
-        {
-          title: 'bbbbbb',
-          start: '2021-07-05',
-          end: '2021-07-05',
-          cssClass: 'blue'
-        }
-      ]
-    }
+    return {}
   },
-  methods: {
-    // 选择月份
-    changeMonth (start, end, current) {
-      console.log('changeMonth', start.format(), end.format(), current.format())
-    },
-    // 点击事件
-    eventClick (event, jsEvent, pos) {
-      console.log('eventClick', event, jsEvent, pos)
-    },
-    // 点击当天
-    dayClick (day, jsEvent) {
-      console.log('dayClick', day, jsEvent)
-    },
-    // 查看更多
-    moreClick (day, events, jsEvent) {
-      console.log('moreCLick', day, events, jsEvent)
-    }
-  }
+  computed: {
+    ...mapGetters({
+      meetingInfo: 'meetingInfo'
+    })
+  },
+  methods: {}
 }
 </script>
 
@@ -119,5 +93,10 @@ export default {
 .meeting-list .panel {
   box-sizing: border-box;
   padding: 20px;
+}
+.meeting-con-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
