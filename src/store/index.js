@@ -8,6 +8,7 @@ import website from './modules/website'
 import community from './modules/community'
 import project from './modules/project'
 import meeting from './modules/meeting'
+import faq from './modules/faq'
 import getters from './getters'
 
 Vue.use(Vuex)
@@ -18,7 +19,8 @@ const store = new Vuex.Store({
     website,
     community,
     project,
-    meeting
+    meeting,
+    faq
   },
   getters
 })

@@ -65,12 +65,59 @@
     <!-- 组织架构板块 -->
     <div class="secction organization">
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
           <img style="width:100%;" :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构">
         </div>
       </div>
+      <!-- <div class="row">
+        <h5>管理委员会</h5>
+        <p>由固件联盟下属开源工作组的核心成员组成，主要包含一下职责：</p>
+        <ol>
+          <li>社区定位、路标</li>
+          <li>关键成员提名、投票</li>
+          <li>需求/问题的排序</li>
+          <li>关键技术方案和架构讨论决策</li>
+          <li>分工决策</li>
+        </ol>
+        <p>管理委员会定期收集提案系统中提交的议题，并召开线上会议进行讨论决策。</p>
+      </div>
+      <div class="row">
+        <h5>代码管理组</h5>
+        <p>负责社区项目的开发和管理，保障开源项目的代码提交、检视、issue管理等日常操作的有序进行，同时负责输出项目的快速入门指南，帮助新人尽快熟悉项目，根据权限划分为一下三类角色：</p>
+        <table>
+          <thead>
+            <td>角色</td>
+            <td>色调</td>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Maninmatain</td>
+              <td>负责版本发布，功能开发，代码检视，拥有代码合入</td>
+            </tr>
+            <tr>
+              <td>Developer</td>
+              <td>负责功能开发，问题修复，有评审Contributor提交的patch权限，有申请代码合入的权限，但没有代码合入的权限，同时作为Maintainer的后备人选。</td>
+            </tr>
+            <tr>
+              <td>Contributor</td>
+              <td>开源代码使用者和贡献者，可以通过邮件提交patch，报告缺陷，无直接申请代码合入的权限。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <h5>集成测试组</h5>
+        <p>负责C环境的搭建维护和自动化测试的集成，其中自动化测试用例由项目提供，集成测试组不负责用例的编写。</p>
+      </div>
+      <div class="row">
+        <h5>安全组</h5>
+        <p>安全组负责社区开源项目的漏洞管理，需要及时响应社区成员上报的疑似漏洞，同时要主动关注业界披露的漏洞。一旦发现受影响漏洞，要按照社区漏洞处理流程尽快分析解决。对于已经修复的漏洞需要整理后输出漏洞分析到代码仓的wiki页面。</p>
+      </div>
+      <div class="row">
+        <h5>社区运营组</h5>
+        <p>负责社区基础设置的维护和日常运作，如社区门户网站内容的更新，培训和活动的策划、会议的组织、反馈意见的收集处理。</p>
+      </div> -->
     </div>
-
   </div>
 </template>
 
@@ -98,18 +145,32 @@ export default {
 .secction {
   width: 100%;
   box-sizing: border-box;
-  padding: 40px 16vw;
+  padding: 40px 10vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.secction>div{
+.secction.organization {
   width: 100%;
+  box-sizing: border-box;
+  padding: 40px 10vw;
+  display: flex;
+  flex-flow: column;
 }
-.secction.slideshow{
+.secction>div {
+  width: 100%;
+  background: white;
+}
+.secction.organization>div.row,
+.secction.community>div.row {
+  box-sizing: border-box;
+  padding: 15px 0;
+  margin: 0;
+}
+.secction.slideshow {
   padding: 0;
 }
-.carousel-caption{
+.carousel-caption {
   width: 100%;
   height: 280px;
   display: flex;
@@ -127,14 +188,14 @@ export default {
   background: url('../../../static/image/eg_02.png') no-repeat 0 0;
   background-size: 100% 100%;
 }
-.introduce-txt{
+.introduce-txt {
   box-sizing: border-box;
   padding: 16px 32px;
   background: #ffffff60;
   border-radius: 6px;
 }
 .int-list>li,
-.community-content{
+.community-content {
   list-style: inside;
   font-size: 1.6rem;
   letter-spacing: 2px;
@@ -143,14 +204,14 @@ export default {
   text-indent: 2em;
   text-align: left;
 }
-.int-list>li{
+.int-list>li {
   color: #ffffff;
 }
-.community-content{
+.community-content {
   color: rgb(63, 63, 63);
 }
 
-.carousel-caption{
+.carousel-caption {
   position: static;
   color: #ffffff;
   padding: 0;
@@ -170,5 +231,9 @@ div#carousel-example-generic {
 }
 .secction:nth-child(even) {
   background: rgb(230, 231, 230);
+}
+.secction.community>div {
+  display: flex;
+  align-items: center;
 }
 </style>

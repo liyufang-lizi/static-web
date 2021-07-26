@@ -1,7 +1,7 @@
 const meeting = {
   state: {
     meetingInfo: {
-      applyMeetingUrl: 'https://gitee.com/openfirmware/proposal',
+      applyMeetingUrl: 'https://gitee.com/open-firmware/proposal',
       meetingListData: [{
         id: 0,
         meetingDate: '2021-06-28',

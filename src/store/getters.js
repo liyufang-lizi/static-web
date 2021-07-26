@@ -11,6 +11,7 @@ const getters = {
   introduceKey: state => state.community.introduceKey,
   communityContent: state => state.community.communityContent,
   projectInfo: state => state.project.projectInfo,
-  meetingInfo: state => state.meeting.meetingInfo
+  meetingInfo: state => state.meeting.meetingInfo,
+  faqInfo: state => state.faq.faqInfo
 }
 export default getters

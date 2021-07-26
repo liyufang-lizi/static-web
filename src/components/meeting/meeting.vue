@@ -2,7 +2,7 @@
   <div class="contain">
     <!-- 会议纪要 -->
     <div class="meeting-summary row">
-      <div class="col-xs-12 col-sm-4 col-md-4">
+      <div class="col-xs-12 col-sm-5 col-md-4">
         <!-- <full-calendar :events="monthData" class="test-fc" first-day='1' locale="fr"
           @changeMonth="changeMonth"
           @eventClick="eventClick"
@@ -11,6 +11,7 @@
         </full-calendar> -->
         <Calendar
           :sundayStart="true"
+          v-on:changeMonth="changeDate"
           :markDate="meetingInfo.meetingDateData"
         ></Calendar>
         <!--
@@ -25,7 +26,7 @@
           // :sundayStart="true" //默认是周一开始 当是true的时候 是周日开始
          -->
       </div>
-      <div class="col-xs-12 col-sm-8 col-md-8">
+      <div class="col-xs-12 col-sm-7 col-md-8">
         <div class="jump-btn row">
           <a :href="meetingInfo.applyMeetingUrl" style="width: 120px;" class="btn btn-primary active" role="button" target="_blank">会议议题申请</a>
         </div>
@@ -72,7 +73,11 @@ export default {
       meetingInfo: 'meetingInfo'
     })
   },
-  methods: {}
+  methods: {
+    changeDate (data) {
+      console.log('改变月份！' + data)
+    }
+  }
 }
 </script>
 

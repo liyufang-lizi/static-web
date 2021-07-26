@@ -4,6 +4,7 @@ import Home from '@/components/home/Home'
 // import MeetingCalendar from '@/components/meeting/MeetingCalendar'
 import Meeting from '@/components/meeting/Meeting'
 import ProjectList from '@/components/project/ProjectList'
+import Faq from '@/components/faq/Faq'
 // import AboutCommunity from '@/components/community/AboutCommunity'
 
 Vue.use(Router)
@@ -34,6 +35,10 @@ export default new Router({
       path: '/meeting',
       name: 'Meeting',
       component: Meeting
+    }, {
+      path: '/faq',
+      name: 'Faq',
+      component: Faq
     }
     // , {
     //   path: '/about_community',

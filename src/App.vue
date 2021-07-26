@@ -20,8 +20,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li v-for="item in navList" :key="item.filename">
-              <a v-if="item.children.length === 0" :href="'#/' + item.filename" :id="item.fliename">{{ item.name }}</a>
-              <!-- <a v-else :href="'#/' + item.filename" :id="item.fliename" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <a v-if="item.filename === 'code_base'" href="https://gitee.com/open-firmware" target="_blank" :id="item.fliename">{{ item.name }}</a>
+              <a v-else :href="'#/' + item.filename" :id="item.fliename">{{ item.name }}</a>
+              <!--包含子菜单的表述
+              <a v-if="item.children.length === 0" :href="'#/' + item.filename == 'code_base' ? 'https://gitee.com/open-firmware' : item.filename" :id="item.fliename">{{ item.name }}</a>
+              <a v-else :href="'#/' + item.filename" :id="item.fliename" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 {{ item.name }}
                 <span class="caret"></span>
               </a>

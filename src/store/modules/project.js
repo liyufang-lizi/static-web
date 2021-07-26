@@ -2,11 +2,14 @@ const project = {
   state: {
     projectInfo: {
       introduce: 'flowchart_for_apply.png',
-      applyProUrl: 'https://gitee.com/openfirmware/project',
+      applyProUrl: 'https://gitee.com/open-firmware/project',
+      project_img_url: '', // 项目图片地址前缀
       listData: [{
         id: 0,
+        project_img: '', // 项目图片
         project_index: '项目序号-01',
         project_name: '测试数据-项目一',
+        project_codebase: '', // 项目代码仓地址
         project_intro: [
           {
             id: 0,
@@ -18,8 +21,10 @@ const project = {
         ]
       }, {
         id: 1,
+        project_img: '',
         project_index: '项目序号-02',
         project_name: '测试数据-项目二',
+        project_codebase: '',
         project_intro: [
           {
             id: 0,
