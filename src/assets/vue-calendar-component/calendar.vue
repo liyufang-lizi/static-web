@@ -40,7 +40,7 @@ li {
 .wh_content_all {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
     "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-  background-color: #a2c5c5;
+  background-color: #5e798af2;
   width: 100%;
   overflow: hidden;
   padding-bottom: 8px;

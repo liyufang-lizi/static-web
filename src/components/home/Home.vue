@@ -69,7 +69,7 @@
           <img style="width:100%;" :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构">
         </div>
       </div>
-      <!-- <div class="row">
+      <div class="row">
         <h5>管理委员会</h5>
         <p>由固件联盟下属开源工作组的核心成员组成，主要包含一下职责：</p>
         <ol>
@@ -116,7 +116,7 @@
       <div class="row">
         <h5>社区运营组</h5>
         <p>负责社区基础设置的维护和日常运作，如社区门户网站内容的更新，培训和活动的策划、会议的组织、反馈意见的收集处理。</p>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>

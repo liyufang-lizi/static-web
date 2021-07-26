@@ -2,9 +2,15 @@
   <div class="contain">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="panel panel-default" v-for="item in faqInfo" :key="item.id">
+        <div class="panel panel-primary" v-for="item in faqInfo" :key="item.id">
           <div class="panel-heading">Q：{{ item.question }}</div>
-          <div class="panel-body">A：{{ item.answer }}</div>
+          <div class="panel-body" v-if="item.extra_url">
+            <b>A：</b>{{ item.answer }}
+            <a :href="item.extra_url" style="width: 120px;font-weight: 700;" target="_blank">{{ item.extra_url }}</a>
+          </div>
+          <div class="panel-body" v-else>
+            <b>A：</b>{{ item.answer }}
+          </div>
         </div>
       </div>
     </div>
@@ -39,7 +45,7 @@ export default {
   font-size: 16px;
   font-weight: 700;
 }
-.panel-body{
+.panel-body>.panel-primary>.panel-body{
   font-size: 1.6rem;
   letter-spacing: 2px;
   word-spacing: 2px;

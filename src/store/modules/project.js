@@ -10,6 +10,8 @@ const project = {
         project_index: '项目序号-01',
         project_name: '测试数据-项目一',
         project_codebase: '', // 项目代码仓地址
+        project_type: '', // 项目类型
+        project_start: '', // 项目热度
         project_intro: [
           {
             id: 0,
@@ -25,6 +27,8 @@ const project = {
         project_index: '项目序号-02',
         project_name: '测试数据-项目二',
         project_codebase: '',
+        project_type: '',
+        project_start: '',
         project_intro: [
           {
             id: 0,
