@@ -19,6 +19,7 @@
     "navigator": "^1.0.1",
     "vue": "^2.5.2",
     "vue-composition-api": "0.0.1",
+    "vue-tree-chart": "^1.2.9",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
