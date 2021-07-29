@@ -65,15 +65,23 @@
     <!-- 组织架构板块 -->
     <div class="secction organization">
       <div class="row">
-        <div class="col-xs-12 col-sm-5 col-md-4" style="padding: 0;">
-          <img style="width:100%;" :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构">
-          <!-- <div class="bg-btn-div">
-            <div class="btndiv"></div>
-            <div class="btndiv"></div>
-            <div class="btndiv"></div>
-            <div class="btndiv"></div>
-            <div class="btndiv"></div>
-          </div> -->
+        <div class="col-xs-12 col-sm-5 col-md-4" style="padding: 0;height: 406px;">
+          <!-- <img :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构"> -->
+          <div class="bg-btn-div">
+            <div class="btndiv click-active" id="glwyh" title="管理委员会" @click="toShowCurrentClass('glwyh')">管理委员会</div>
+            <div class="btndiv" id="dmglz" title="代码管理组" @click="toShowCurrentClass('dmglz')">代码管理组</div>
+            <div class="btndiv" id="jccsz" title="测试集成组" @click="toShowCurrentClass('jccsz')">测试集成组</div>
+            <div class="btndiv" id="aqz" title="安全组" @click="toShowCurrentClass('aqz')">安全组</div>
+            <div class="btndiv" id="sqyyz" title="社区运营组" @click="toShowCurrentClass('sqyyz')">社区运营组</div>
+          </div>
+          <div class="btn-line">
+            <div class="vertical-line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
 
         </div>
         <div class="col-xs-12 col-sm-7 col-md-8 organization-subs">
@@ -94,8 +102,10 @@
             <p>负责社区项目的开发和管理，保障开源项目的代码提交、检视、issue管理等日常操作的有序进行，同时负责输出项目的快速入门指南，帮助新人尽快熟悉项目，根据权限划分为一下三类角色：</p>
             <table>
               <thead>
-                <td>角色</td>
-                <td>色调</td>
+                <tr>
+                  <td>角色</td>
+                  <td>色调</td>
+                </tr>
               </thead>
               <tbody>
                 <tr>
@@ -144,8 +154,28 @@ export default {
       websiteInfo: 'websiteInfo',
       organizationInfo: 'organizationInfo'
     })
+  },
+  methods: {
+    toShowCurrentClass (className) {
+      var tips = document.getElementsByClassName('subs-panel')
+      for (var i = 0; i < tips.length; i++) {
+        if (tips[i].className.indexOf(className) !== -1) {
+          document.getElementsByClassName(tips[i].className)[0].style.display = 'block'
+          document.getElementById(className).className = 'btndiv click-active'
+          var subs = document.getElementById(className).parentElement.children
+          for (var j = 0; j < subs.length; j++) {
+            if (subs[j].id !== className) {
+              subs[j].className = 'btndiv'
+            }
+          }
+        } else {
+          document.getElementsByClassName(tips[i].className)[0].style.display = 'none'
+        }
+      }
+    }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -240,46 +270,140 @@ div#carousel-example-generic {
 .secction:nth-child(even) {
   background: rgb(230, 231, 230);
 }
-.bg-btn-div{
+.bg-btn-div {
   width: 546px;
-  height: 266px;
+  height: 406px;
   position: absolute;
   top: 0;
   left: 0;
 }
+.organization-subs{
+  box-sizing: border-box;
+  padding: 20px;
+}
+.subs-panel {
+  display: none;
+}
+.glwyh{
+  display: block;
+}
+.subs-panel h5 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.subs-panel ol li {
+
+  list-style: inside;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 2em;
+  text-indent: 2em;
+  text-align: left;
+}
+.subs-panel p {
+  list-style: inside;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 2em;
+  text-indent: 2em;
+  text-align: left;
+}
+.subs-panel table {
+  margin-top: 20px;
+}
+.subs-panel table tr td {
+  text-align: center;
+  list-style: inside;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  line-height: 2em;
+  text-align: left;
+  border: 1px solid #507b9b;
+  box-sizing: border-box;
+  padding: 10px 24px;
+}
 .btndiv{
   position: absolute;
-  background: #c4262675;
+  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #507b9b;
+  line-height: 40px;
+  text-align: center;
+}
+.btndiv:hover {
+  cursor: pointer;
+  box-shadow: 0 0 18px 0 #507b9b;
+}
+.click-active{
+  box-shadow: 0 0 18px 0 #507b9b;
 }
 .btndiv:nth-child(1){
-  width: 139px;
-  height: 57px;
-  top: 34px;
-  left: 205px;
+  top: 174px;
+  left: 20px;
 }
 .btndiv:nth-child(2){
-  width: 120px;
-  height: 40px;
-  top: 190px;
-  left: 23px;
+  top: 35px;
+  left: 200px;
 }
 .btndiv:nth-child(3){
-  width: 120px;
-  height: 40px;
-  top: 190px;
-  left: 162px;
+  top: 128px;
+  left: 200px;
 }
 .btndiv:nth-child(4){
-  width: 88px;
-  height: 40px;
-  top: 190px;
-  left: 301px;
+  top: 221px;
+  left: 200px;
 }
 .btndiv:nth-child(5){
-  width: 120px;
-  height: 40px;
-  top: 190px;
-  left: 408px;
+  top: 314px;
+  left: 200px;
 }
 
+/* 分割线 */
+.btn-line{
+  position: relative;
+}
+.vertical-line {
+  width: 0;
+  height: 284px;
+  border-right: 1px solid #507b9b;
+  position: absolute;
+  top: 54px;
+  left: 170px;
+}
+.line {
+  width: 20px;
+  height: 0;
+  border-top:  1px solid #507b9b;
+}
+.line:nth-child(2) {
+  position: absolute;
+  top: 54px;
+  left: 170px;
+}
+.line:nth-child(3) {
+  position: absolute;
+  top: 147px;
+  left: 170px;
+}
+.line:nth-child(4) {
+  position: absolute;
+  top: 194px;
+  left: 150px;
+}
+.line:nth-child(5) {
+  position: absolute;
+  top: 240px;
+  left: 170px;
+}
+.line:nth-child(6) {
+  position: absolute;
+  top: 338px;
+  left: 170px;
+}
 </style>

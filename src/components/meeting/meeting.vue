@@ -1,14 +1,9 @@
 <template>
   <div class="contain">
     <!-- 会议纪要 -->
+    <div class="meeting-banner"></div>
     <div class="meeting-summary row">
       <div class="col-xs-12 col-sm-5 col-md-4">
-        <!-- <full-calendar :events="monthData" class="test-fc" first-day='1' locale="fr"
-          @changeMonth="changeMonth"
-          @eventClick="eventClick"
-          @dayClick="dayClick"
-          @moreClick="moreClick">
-        </full-calendar> -->
         <Calendar
           :sundayStart="true"
           v-on:changeMonth="changeDate"
@@ -19,11 +14,11 @@
           // v-on:changeMonth="changeDate"
           // v-on:isToday="clickToday"
           // :markDate=arr // arr=['2018/4/1','2018/4/3'] 标记4月1日和4月3日 简单标记
-          //:markDateMore=arr // 多种不同的标记
+          // :markDateMore=arr // 多种不同的标记
           // 第一个标记和第二个标记不能同时使用
-          // :agoDayHide='1514937600' //某个日期以前的不允许点击  时间戳10位
-          // :futureDayHide='1525104000' //某个日期以后的不允许点击  时间戳10位
-          // :sundayStart="true" //默认是周一开始 当是true的时候 是周日开始
+          // :agoDayHide='1514937600' // 某个日期以前的不允许点击  时间戳10位
+          // :futureDayHide='1525104000' // 某个日期以后的不允许点击  时间戳10位
+          // :sundayStart="true" // 默认是周一开始 当是true的时候 是周日开始
          -->
       </div>
       <div class="col-xs-12 col-sm-7 col-md-8">
@@ -56,13 +51,10 @@
 </template>
 
 <script>
-// import FullCalendar from '../../assets/vue-fullcalendar/fullCalendar.vue'
 import Calendar from '../../assets/vue-calendar-component/index'
 import {mapGetters} from 'vuex'
 export default {
   components: {
-    // FullCalendar
-    // 'full-calendar': FullCalendar
     Calendar
   },
   data () {
@@ -82,7 +74,7 @@ export default {
 </script>
 
 <style scoped>
-.contain {
+.meeting-summary{
   box-sizing: border-box;
   padding: 40px 10vw;
 }
@@ -103,5 +95,11 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.meeting-banner{
+  width: 100%;
+  height: 280px;
+  background: url('../../../static/image/meeting-banner.png') no-repeat 0 0;
+  background-size: 100% 100%;
 }
 </style>

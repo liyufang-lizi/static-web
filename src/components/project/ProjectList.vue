@@ -76,8 +76,19 @@ export default {
   box-sizing: border-box;
   padding: 20px 10vw;
 }
+.project-item{
+  box-sizing: border-box;
+  padding: 20px 0;
+  /* background: #ffffff; */
+}
+.project-item:nth-child(odd) {
+  background: #d8d8d8;
+}
+.project-item:nth-child(even) {
+  background: #f5f5f5;
+}
 .project-item.row {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 .project-item h4{
   font-weight: 600;
