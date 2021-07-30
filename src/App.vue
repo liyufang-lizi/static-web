@@ -50,21 +50,11 @@
       <router-view/>
     </section>
 
-    <!-- <footer>
-      <div class="container">
-        <ul class="footer-list">
-          <li v-for="item in navList" :key="item.filename">
-            <router-link class="nav-item" :to="'/' + item.filename" :id="item.fliename">{{ item.name }}</router-link>
-            <ul class="sub-footer-list">
-              <li v-for="ite in item.children" :key="ite.filename">
-                <a v-if="ite.filename === 'apply_issue'" href="https://gitee.com/unibios/proposal/tree/master" target="_blank">{{ ite.name }}</a>
-                <router-link v-else :to="'/' + ite.filename" :id="ite.filename">{{ ite.name }}</router-link>
-              </li>
-            </ul>
-          </li>
-        </ul>
+    <footer>
+      <div class="foot-content">
+        <b>Copyright © 2009-2021</b>
       </div>
-    </footer> -->
+    </footer>
   </div>
 </template>
 
@@ -91,7 +81,7 @@ export default {
 @import './style/footer.css';
 section {
   width: 100%;
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 150px);
   background: rgb(230, 231, 230);
   position: relative;
   top: 50px;
@@ -101,8 +91,27 @@ a.navbar-brand {
   justify-content: flex-start;
   align-items: center;
 }
-a.navbar-brand>img{
+a.navbar-brand>img {
   height: 48px;
   margin-right: 20px;
+}
+footer {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  background: #ffffff;
+  top: 50px;
+}
+.foot-content {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.foot-content b {
+  font-size: 14px;
 }
 </style>
