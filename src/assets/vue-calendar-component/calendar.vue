@@ -182,7 +182,7 @@ export default {
     },
     textTop: {
       type: Array,
-      default: () => ['一', '二', '三', '四', '五', '六', '日']
+      default: () => ['日', '一', '二', '三', '四', '五', '六'] // ['一', '二', '三', '四', '五', '六', '日']
     },
     sundayStart: {
       type: Boolean,
