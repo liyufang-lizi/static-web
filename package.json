@@ -2,7 +2,7 @@
   "name": "static-web",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "liyufang <liyufang_lizi@163.com>",
+  "author": "lyf",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -16,6 +16,7 @@
     "jquery": "^3.6.0",
     "jsdom": "^16.6.0",
     "location": "0.0.1",
+    "moment": "^2.29.1",
     "navigator": "^1.0.1",
     "vue": "^2.5.2",
     "vue-composition-api": "0.0.1",

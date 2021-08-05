@@ -7,7 +7,7 @@
         <Calendar
           :sundayStart="true"
           v-on:changeMonth="changeDate"
-          :markDate="meetingInfo.meetingDateData"
+          :markDate="markDate"
         ></Calendar>
         <!--
           // v-on:choseDay="clickDay"
@@ -28,7 +28,7 @@
         <div class="meeting-list row">
           <div class="panel panel-default">
             <ul :data="meetingInfo.meetingListData">
-              <li class="meeting-item" v-for="item in meetingInfo.meetingListData" :key="item.id">
+              <li class="meeting-item" :id="item.meetingDate" v-for="item in meetingInfo.meetingListData" :key="item.id">
                 <div class="meeting-date row">
                   {{ item.meetingDate }}
                 </div>
@@ -42,6 +42,7 @@
                   </div>
                 </div>
               </li>
+              <li>{{ tips }}</li>
             </ul>
           </div>
         </div>
@@ -52,22 +53,47 @@
 
 <script>
 import Calendar from '../../assets/vue-calendar-component/index'
+import moment from 'moment'
 import {mapGetters} from 'vuex'
 export default {
   components: {
     Calendar
   },
   data () {
-    return {}
+    return {
+      markDate: [],
+      tips: ''
+    }
   },
   computed: {
     ...mapGetters({
       meetingInfo: 'meetingInfo'
     })
   },
+  created () {
+    for (var i = 0; i < this.meetingInfo.meetingListData.length; i++) {
+      this.markDate.push(this.meetingInfo.meetingListData[i].meetingDate)
+    }
+    console.log(this.markDate)
+  },
   methods: {
-    changeDate (data) {
-      console.log('改变月份！' + data)
+    changeDate (date) {
+      var compStr = moment(date).format('YYYY-MM-DD').replace(/\//g, '-').substring(0, 7)
+      var lists = document.getElementsByClassName('meeting-item')
+      var count = 0
+      for (var i = 0; i < lists.length; i++) {
+        if (lists[i].id.indexOf(compStr) !== -1) {
+          lists[i].style.display = 'block'
+          count++
+        } else {
+          lists[i].style.display = 'none'
+        }
+      }
+      if (count > 0) {
+        this.tips = ''
+      } else {
+        this.tips = '当前暂时没有会议安排！'
+      }
     }
   }
 }
