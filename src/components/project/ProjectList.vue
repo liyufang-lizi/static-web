@@ -14,7 +14,7 @@
     <div class="project-list" :data="projectInfo.listData">
       <div class="project-item row" v-for="item in projectInfo.listData" :key="item.id">
         <div class="col-xs-12 col-sm-3 col-md-2">
-          <img src="#" alt="项目图片">
+          <img :src="projectInfo.project_img_url + item.project_img" :alt="item.project_name">
         </div>
         <div class="col-xs-12 col-sm-7 col-md-8">
           <h4>{{ item.project_name }}</h4>
@@ -72,14 +72,9 @@ export default {
 .project-introduce>div>img {
   width: 80%;
 }
-.project-list {
-  /* box-sizing: border-box;
-  padding: 20px 10vw; */
-}
-.project-item{
+.project-item {
   box-sizing: border-box;
   padding: 20px 0;
-  /* background: #ffffff; */
 }
 .project-item:nth-child(odd) {
   background: #d8d8d8;

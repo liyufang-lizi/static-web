@@ -13,11 +13,6 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <div class="carousel-caption image-introduce-0">
-              <!-- 社区板块 -->
-            </div>
-          </div>
-          <div class="item">
             <div class="carousel-caption image-introduce-1">
               <div class="introduce-txt">
                 <ul class="int-list" :data="introduceKeyData">
@@ -27,6 +22,11 @@
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="carousel-caption image-introduce-0">
+              <!-- 社区板块 -->
             </div>
           </div>
           <div class="item">
@@ -197,7 +197,7 @@ export default {
 }
 .secction>div {
   width: 100%;
-  background: white;
+  /* background: white; */
 }
 .secction.organization>div.row,
 .secction.community>div.row {

@@ -3,10 +3,10 @@ const project = {
     projectInfo: {
       introduce: 'flowchart_for_apply.png',
       applyProUrl: 'https://gitee.com/open-firmware/project',
-      project_img_url: '', // 项目图片地址前缀
+      project_img_url: 'https://github.com/liyufang-lizi/static-web/raw/gh-pages/static/image/', // 项目图片地址前缀
       listData: [{
         id: 0,
-        project_img: '', // 项目图片
+        project_img: 'eg_img_01.ipg', // 项目图片
         project_index: '项目序号-01',
         project_name: '测试数据-项目一',
         project_codebase: '', // 项目代码仓地址
@@ -23,7 +23,7 @@ const project = {
         ]
       }, {
         id: 1,
-        project_img: '',
+        project_img: 'eg_img_02.ipg',
         project_index: '项目序号-02',
         project_name: '测试数据-项目二',
         project_codebase: '',
@@ -40,7 +40,7 @@ const project = {
         ]
       }, {
         id: 2,
-        project_img: '',
+        project_img: 'eg_img_03.ipg',
         project_index: '项目序号-03',
         project_name: '测试数据-项目三',
         project_codebase: '',

@@ -104,6 +104,9 @@ export default {
   box-sizing: border-box;
   padding: 40px 10vw;
 }
+.meeting-summary>div{
+  margin: 16px 0;
+}
 .row {
   margin: 0;
 }
@@ -114,7 +117,7 @@ export default {
   box-sizing: border-box;
   padding: 20px;
   margin: 0;
-  height: calc(100vh - 576px);
+  height: calc(100vh - 608px);
   overflow: auto;
 }
 .meeting-con-item{
