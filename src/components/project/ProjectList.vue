@@ -104,4 +104,7 @@ export default {
 .project-item.row>:last-child{
   text-align: center;
 }
+.project-item>div>img{
+  width: 100%;
+}
 </style>
