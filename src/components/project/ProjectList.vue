@@ -14,7 +14,7 @@
     <div class="project-list" :data="projectInfo.listData">
       <div class="project-item row" v-for="item in projectInfo.listData" :key="item.id">
         <div class="col-xs-12 col-sm-3 col-md-2">
-          <img :src="projectInfo.project_img_url + item.project_img" :alt="item.project_name">
+          <img :src="websiteInfo.imageUrlPre + item.project_img" :alt="item.project_name">
         </div>
         <div class="col-xs-12 col-sm-7 col-md-8">
           <h4>{{ item.project_name }}</h4>
