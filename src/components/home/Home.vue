@@ -197,7 +197,6 @@ export default {
 }
 .secction>div {
   width: 100%;
-  /* background: white; */
 }
 .secction.organization>div.row,
 .secction.community>div.row {
