@@ -73,8 +73,8 @@ export default {
   width: 80%;
 }
 .project-list {
-  box-sizing: border-box;
-  padding: 20px 10vw;
+  /* box-sizing: border-box;
+  padding: 20px 10vw; */
 }
 .project-item{
   box-sizing: border-box;
@@ -88,7 +88,11 @@ export default {
   background: #f5f5f5;
 }
 .project-item.row {
-  margin: 20px 0;
+  width: 100%;
+  height: 240px;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 40px 10vw;
 }
 .project-item h4{
   font-weight: 600;

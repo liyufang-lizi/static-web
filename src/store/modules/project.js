@@ -38,6 +38,23 @@ const project = {
             content: '段落标注-02'
           }
         ]
+      }, {
+        id: 2,
+        project_img: '',
+        project_index: '项目序号-03',
+        project_name: '测试数据-项目三',
+        project_codebase: '',
+        project_type: '',
+        project_start: '',
+        project_intro: [
+          {
+            id: 0,
+            content: '段落标注-01'
+          }, {
+            id: 1,
+            content: '段落标注-02'
+          }
+        ]
       }]
     }
   },

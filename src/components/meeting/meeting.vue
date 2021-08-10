@@ -74,7 +74,7 @@ export default {
     for (var i = 0; i < this.meetingInfo.meetingListData.length; i++) {
       this.markDate.push(this.meetingInfo.meetingListData[i].meetingDate)
     }
-    console.log(this.markDate)
+    // console.log(this.ate)
   },
   methods: {
     changeDate (date) {
@@ -108,14 +108,14 @@ export default {
   margin: 0;
 }
 .jump-btn.row {
-  margin: 32px;
-}
-.meeting-list.row {
-  margin: 0 32px;
+  margin-bottom: 32px;
 }
 .meeting-list .panel {
   box-sizing: border-box;
   padding: 20px;
+  margin: 0;
+  height: calc(100vh - 576px);
+  overflow: auto;
 }
 .meeting-con-item{
   display: flex;

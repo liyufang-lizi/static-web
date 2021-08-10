@@ -13,6 +13,11 @@
 .wh_container {
   max-width: 410px;
   margin: auto;
+  height: calc(100vh - 510px);
+  background-color: #5e798af2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 li {
@@ -40,8 +45,8 @@ li {
 .wh_content_all {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
     "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
-  background-color: #5e798af2;
   width: 100%;
+  /* height: 100%; */
   overflow: hidden;
   padding-bottom: 8px;
 }
@@ -49,6 +54,8 @@ li {
 .wh_content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 0 3% 0 3%;
   width: 100%;
 }
@@ -68,7 +75,7 @@ wh_content_item_tag {
   position: relative;
 }
 .wh_content_item {
-  height: 40px;
+  height: 52px;
 }
 
 .wh_top_tag {
