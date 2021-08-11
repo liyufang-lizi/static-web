@@ -104,7 +104,7 @@
               <thead>
                 <tr>
                   <td>角色</td>
-                  <td>色调</td>
+                  <td>职责</td>
                 </tr>
               </thead>
               <tbody>
