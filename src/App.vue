@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button id="nav-btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -20,8 +20,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li v-for="item in navList" :key="item.filename">
-              <a v-if="item.filename === 'code_base'" href="https://gitee.com/open-firmware" target="_blank" :id="item.fliename">{{ item.name }}</a>
-              <a v-else :href="'#/' + item.filename" :id="item.fliename">{{ item.name }}</a>
+              <a class="jump_a" v-if="item.filename === 'code_base'" href="https://gitee.com/open-firmware" target="_blank" :id="item.fliename">{{ item.name }}</a>
+              <a class="jump_a" v-else :href="'#/' + item.filename" :id="item.fliename">{{ item.name }}</a>
               <!--包含子菜单的表述
               <a v-if="item.children.length === 0" :href="'#/' + item.filename == 'code_base' ? 'https://gitee.com/open-firmware' : item.filename" :id="item.fliename">{{ item.name }}</a>
               <a v-else :href="'#/' + item.filename" :id="item.fliename" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -60,6 +60,7 @@
 
 <script>
 import {mapGetters} from 'vuex'
+import $ from 'jQuery'
 export default {
   name: 'App',
   data () {
@@ -72,6 +73,19 @@ export default {
       navList: 'navInfo',
       websiteInfo: 'websiteInfo'
     })
+  },
+  methods () {
+    var navBlock = document.querySelector('.navbar-toggle')
+    $('.navbar-nav').on('click', 'jump_a', function () {
+      navBlock.click()
+    })
+
+    // var lis = document.getElementsByClassName('navbar-nav')[0].children
+    // for(var i = 0; i < lis.length; i++) {
+    //   lis[i].children[0].on('click', function () {
+    //     document.getElementsByClassName('navbar-toggle')[0].click()
+    //   })
+    // }
   }
 }
 </script>
@@ -94,6 +108,17 @@ a.navbar-brand {
 a.navbar-brand>img {
   height: 48px;
   margin-right: 20px;
+}
+form.navbar-form.navbar-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .form-group{
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 }
 footer {
   width: 100%;

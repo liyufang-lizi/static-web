@@ -51,6 +51,11 @@ export default {
   box-sizing: border-box;
   padding: 40px 10vw;
 }
+@media (max-width: 768px) {
+  .contain{
+    padding: 20px 0;
+  }
+}
 .secction {
   box-sizing: border-box;
   padding: 32px;

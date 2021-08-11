@@ -1,8 +1,8 @@
 <style scoped>
 @media screen and (min-width: 460px) {
   .wh_item_date:hover {
-    background: #a6d0e9;
-    cursor: pointer;
+    /* background: #a6d0e9; */
+    cursor: default;
   }
 }
 * {
@@ -11,7 +11,7 @@
 }
 
 .wh_container {
-  max-width: 410px;
+  /* max-width: 410px; */
   margin: auto;
   min-height: calc(100vh - 542px);
   background-color: #5e798af2;
@@ -19,7 +19,6 @@
   justify-content: center;
   align-items: center;
 }
-
 li {
   list-style-type: none;
 }
@@ -66,7 +65,7 @@ li {
 }
 
 .wh_content_item,
-wh_content_item_tag {
+.wh_content_item_tag {
   font-size: 15px;
   width: 13.4%;
   text-align: center;
@@ -156,12 +155,18 @@ wh_content_item_tag {
         </div>
       </div>
       <div class="wh_content">
-        <div class="wh_content_item" v-for="(item,index) in list" :key="index" @click="clickDay(item,index)">
+        <div class="wh_content_item" v-for="(item,index) in list" :key="index">
           <div
             class="wh_item_date"
             v-bind:class="[{ wh_isMark: item.isMark},{wh_other_dayhide:item.otherMonth!=='nowMonth'},{wh_want_dayhide:item.dayHide},{wh_isToday:item.isToday},{wh_chose_day:item.chooseDay},setClass(item)]"
           >{{item.id}}</div>
         </div>
+        <!-- <div class="wh_content_item" v-for="(item,index) in list" :key="index" @click="clickDay(item,index)">
+          <div
+            class="wh_item_date"
+            v-bind:class="[{ wh_isMark: item.isMark},{wh_other_dayhide:item.otherMonth!=='nowMonth'},{wh_want_dayhide:item.dayHide},{wh_isToday:item.isToday},{wh_chose_day:item.chooseDay},setClass(item)]"
+          >{{item.id}}</div>
+        </div> -->
       </div>
     </div>
   </section>

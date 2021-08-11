@@ -120,6 +120,7 @@ export default {
   height: calc(100vh - 608px);
   overflow: auto;
 }
+
 .meeting-con-item{
   display: flex;
   justify-content: space-between;
@@ -130,5 +131,17 @@ export default {
   height: 280px;
   background: url('../../../static/image/meeting-banner.png') no-repeat 0 0;
   background-size: 100% 100%;
+}
+@media (max-width: 768px) {
+  .meeting-summary{
+    padding: 20px 0;
+  }
+  .meeting-list .panel{
+    height: auto;
+  }
+  .meeting-banner{
+    background: url('../../../static/image/meeting-banner-sm.jpg') no-repeat 0 0;
+    background-size: 100% 100%;
+  }
 }
 </style>

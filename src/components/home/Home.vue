@@ -65,7 +65,7 @@
     <!-- 组织架构板块 -->
     <div class="secction organization">
       <div class="row">
-        <div class="col-xs-12 col-sm-5 col-md-4" style="padding: 0;height: 406px;">
+        <div class="col-xs-12 col-sm-5 col-md-4 organization-chart">
           <!-- <img :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构"> -->
           <div class="bg-btn-div">
             <div class="btndiv click-active" id="glwyh" title="管理委员会" @click="toShowCurrentClass('glwyh')">管理委员会</div>
@@ -188,6 +188,7 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
+
 .secction.organization {
   width: 100%;
   box-sizing: border-box;
@@ -241,6 +242,7 @@ export default {
   text-indent: 2em;
   text-align: left;
 }
+
 .int-list>li {
   color: #ffffff;
 }
@@ -270,7 +272,7 @@ div#carousel-example-generic {
   background: rgb(230, 231, 230);
 }
 .bg-btn-div {
-  width: 546px;
+  /* width: 546px; */
   height: 406px;
   position: absolute;
   top: 0;
@@ -279,6 +281,24 @@ div#carousel-example-generic {
 .organization-subs{
   box-sizing: border-box;
   padding: 20px;
+}
+.organization-chart{
+  padding: 0;
+  height: 406px;
+}
+
+@media (max-width: 768px) {
+  .secction{
+    padding: 20px 0;
+  }
+  .int-list>li,
+  .community-content {
+    font-size: 1.2rem;
+  }
+  .organization-chart {
+    position: relative;
+    left: -20px;
+  }
 }
 .subs-panel {
   display: none;

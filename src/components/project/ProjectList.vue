@@ -84,10 +84,20 @@ export default {
 }
 .project-item.row {
   width: 100%;
-  height: 240px;
   margin: 0;
   box-sizing: border-box;
   padding: 40px 10vw;
+}
+.project-item.row>div{
+  margin: 20px 0;
+}
+@media (max-width: 768px) {
+  .project-title{
+    padding: 20px 0;
+  }
+  .project-item.row {
+    padding: 20px 0;
+  }
 }
 .project-item h4{
   font-weight: 600;
