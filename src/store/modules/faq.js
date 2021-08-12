@@ -12,6 +12,7 @@ const faq = {
       id: 2,
       question: '怎么与社区的成员交流？',
       answer: '社区鼓励成员使用邮件进行沟通交流，社区成员可以访问网站的邮箱列表页面，该页面列举了社区所有的讨论组，社区成员可以选择自己感兴趣的讨论组并加入讨论。关于讨论组的加入和使用方法，可参考以下链接。',
+      extra_name: '邮件列表',
       extra_url: 'https://liyufang-lizi.github.io/static-web/dist/index.html#/mail_list'
     }, {
       id: 3,

@@ -291,8 +291,7 @@ div#carousel-example-generic {
   .secction{
     padding: 20px 0;
   }
-  .int-list>li,
-  .community-content {
+  .int-list>li{
     font-size: 1.2rem;
   }
   .organization-chart {

@@ -51,16 +51,20 @@ export default {
   box-sizing: border-box;
   padding: 40px 10vw;
 }
-@media (max-width: 768px) {
-  .contain{
-    padding: 20px 0;
-  }
-}
 .secction {
   box-sizing: border-box;
   padding: 32px;
   background: #ffffff;
   margin: 20px;
+}
+@media (max-width: 768px) {
+  .contain{
+    /* padding: 20px 0; */
+    padding: 0;
+  }
+  .secction {
+    margin: 0;
+  }
 }
 .secction h4 {
   font-weight: 700;

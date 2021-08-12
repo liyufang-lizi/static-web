@@ -6,7 +6,7 @@
           <div class="panel-heading">Q：{{ item.question }}</div>
           <div class="panel-body" v-if="item.extra_url">
             <b>A：</b>{{ item.answer }}
-            <a :href="item.extra_url" style="width: 120px;font-weight: 700;" target="_blank">{{ item.extra_url }}</a>
+            <a :href="item.extra_url" style="width: 120px;font-weight: 700;" target="_blank">{{ item.extra_name }}</a>
           </div>
           <div class="panel-body" v-else>
             <b>A：</b>{{ item.answer }}
@@ -38,13 +38,16 @@ export default {
   box-sizing: border-box;
   padding: 40px 10vw;
 }
-@media (max-width: 768px) {
-  .contain{
-    padding: 20px 0;
-  }
-}
 .panel{
   margin: 20px;
+}
+@media (max-width: 768px) {
+  .contain{
+    padding: 0;
+  }
+  .panel{
+    margin: 20px 0;
+  }
 }
 .panel-heading{
   font-size: 16px;
