@@ -120,11 +120,38 @@ export default {
   height: calc(100vh - 608px);
   overflow: auto;
 }
+.meeting-date {
+  color: #53b3e1;
+  font-weight: 700;
+  margin-top: 20px;
+}
 
-.meeting-con-item{
+.meeting-con-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 6px 0;
+  /* border-top: 1px dashed lightslategray; */
+  /* border-bottom: 1px dashed lightslategray; */
+}
+.date-time {
+  color: #657f8f;
+  font-weight: 700;
+  /* border-right: 1px dashed lightslategray; */
+}
+.meeting-con-ite {
+  display: flex;
+  flex-direction: column;
+  /* border-left: 1px dashed lightslategray; */
+}
+.meeting-con-ite h4 {
+  box-sizing: border-box;
+  padding: 6px 0;
+  /* border-bottom: 1px dashed lightslategray; */
+}
+.meeting-con-ite p {
+  box-sizing: border-box;
+  padding: 6px 0;
 }
 .meeting-banner{
   width: 100%;
@@ -142,6 +169,15 @@ export default {
   .meeting-banner{
     background: url('../../../static/image/meeting-banner-sm.jpg') no-repeat 0 0;
     background-size: 100% 100%;
+  }
+  .date-time {
+    margin: 8px 0;
+  }
+  .meeting-con-item {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px dashed lightslategray;
   }
 }
 </style>
