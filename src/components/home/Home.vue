@@ -52,7 +52,8 @@
     <div class="secction community">
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-3">
-          <img style="width:100%;" :src="websiteInfo.imageUrlPre + 'home/' + websiteInfo.communityIntroduceImg" alt="社区介绍版本">
+          <div class="img-contain"></div>
+          <!-- <img style="width:100%;" :src="websiteInfo.imageUrlPre + 'home/' + websiteInfo.communityIntroduceImg" alt="社区介绍版本"> -->
         </div>
         <div class="col-xs-12 col-sm-8 col-md-9">
           <div class="community-content" :data="communityContent">
@@ -66,7 +67,7 @@
     <div class="secction organization">
       <div class="row">
         <div class="col-xs-12 col-sm-5 col-md-4 organization-chart">
-          <!-- <img :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构"> -->
+          <!-- <img :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构"> ‘已取消，改成了ann’ -->
           <div class="bg-btn-div">
             <div class="btndiv click-active" id="glwyh" title="管理委员会" @click="toShowCurrentClass('glwyh')">管理委员会</div>
             <div class="btndiv" id="dmglz" title="代码管理组" @click="toShowCurrentClass('dmglz')">代码管理组</div>
@@ -241,6 +242,14 @@ export default {
   line-height: 2em;
   text-indent: 2em;
   text-align: left;
+}
+
+/* 补充的div用来替换img标签 */
+.img-contain {
+  width: 100%;
+  height: 240px;
+  background: url('../../../static/image/community_introduce.png') no-repeat 0 0;
+  background-size: cover;
 }
 
 .int-list>li {
