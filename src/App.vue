@@ -11,7 +11,8 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#/home">
-            <img :src="websiteInfo.imageUrlPre + websiteInfo.websiteLogo" alt="">
+            <!-- <img :src="websiteInfo.imageUrlPre + websiteInfo.websiteLogo" alt=""> -->
+            <span :style='"width:48px;height:48px;margin-right: 20px;display: inline-block;background: url(" + websiteInfo.imageUrlPre + websiteInfo.websiteLogo + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></span>
             {{ websiteInfo.websiteName }}
           </a>
         </div>
@@ -76,7 +77,9 @@ export default {
   },
   methods: {
     dealClick () {
-      document.querySelector('.navbar-toggle').click()
+      if (JSON.parse(document.querySelector('.navbar-toggle').getAttribute('aria-expanded'))) {
+        document.querySelector('.navbar-toggle').click()
+      }
     }
   }
 }

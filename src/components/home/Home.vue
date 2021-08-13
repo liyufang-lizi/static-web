@@ -249,7 +249,8 @@ export default {
   width: 100%;
   height: 240px;
   background: url('../../../static/image/community_introduce.png') no-repeat 0 0;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
 }
 
 .int-list>li {
