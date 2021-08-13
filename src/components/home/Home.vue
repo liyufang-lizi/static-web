@@ -282,7 +282,7 @@ div#carousel-example-generic {
   background: rgb(230, 231, 230);
 }
 .bg-btn-div {
-  /* width: 546px; */
+  /* width: 546px; 去掉了宽度限制 */
   height: 406px;
   position: absolute;
   top: 0;
