@@ -4,8 +4,9 @@
       项目申请流程
     </div>
     <div class="project-introduce row">
-      <div class="project-introduce-img col-xs-12 col-sm-10 col-md-10" :style='"background: url(" + websiteInfo.imageUrlPre + projectInfo.introduce + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'>
-        <!-- <img :src="websiteInfo.imageUrlPre + projectInfo.introduce" style="width:80%;" alt="项目申请流程图"> -->
+      <!-- <div class="project-introduce-img col-xs-12 col-sm-10 col-md-10" :style='"background: url(" + websiteInfo.imageUrlPre + projectInfo.introduce + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div> -->
+      <div class="col-xs-12 col-sm-10 col-md-10">
+        <img :src="websiteInfo.imageUrlPre + projectInfo.introduce" style="width:80%;" alt="项目申请流程图">
       </div>
       <div class="col-xs-12 col-sm-2 col-md-2">
         <a :href="projectInfo.applyProUrl" style="width: 120px;" class="btn btn-primary active" role="button" target="_blank">申请新项目</a>
@@ -14,8 +15,8 @@
     <div class="project-list" :data="projectInfo.listData">
       <div class="project-item row" v-for="item in projectInfo.listData" :key="item.id">
         <div class="col-xs-12 col-sm-4 col-md-2">
-          <div class="pro-img-div" :style='"background: url(" + websiteInfo.imageUrlPre + item.project_img + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div>
-          <!-- <img :src="websiteInfo.imageUrlPre + item.project_img" style="width: 100%;" :alt="item.project_name"> -->
+          <!-- <div class="pro-img-div" :style='"background: url(" + websiteInfo.imageUrlPre + item.project_img + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div> -->
+          <img :src="websiteInfo.imageUrlPre + item.project_img" style="width: 100%;" :alt="item.project_name">
         </div>
         <div class="col-xs-12 col-sm-6 col-md-8">
           <h4>{{ item.project_name }}</h4>
@@ -92,12 +93,12 @@ export default {
 .project-item.row>div{
   margin: 20px 0;
 }
-.project-introduce-img{
+/* .project-introduce-img{
   min-height: 150px;
 }
 .pro-img-div {
   height: 150px;
-}
+} */
 @media (max-width: 768px) {
   .project-title{
     padding: 20px 0;
