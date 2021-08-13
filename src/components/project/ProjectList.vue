@@ -5,7 +5,7 @@
     </div>
     <div class="project-introduce row">
       <div class="col-xs-12 col-sm-10 col-md-10">
-        <img :src="websiteInfo.imageUrlPre + projectInfo.introduce" alt="项目申请流程图">
+        <img :src="websiteInfo.imageUrlPre + projectInfo.introduce" style="width:80%;" alt="项目申请流程图">
       </div>
       <div class="col-xs-12 col-sm-2 col-md-2">
         <a :href="projectInfo.applyProUrl" style="width: 120px;" class="btn btn-primary active" role="button" target="_blank">申请新项目</a>
@@ -14,7 +14,7 @@
     <div class="project-list" :data="projectInfo.listData">
       <div class="project-item row" v-for="item in projectInfo.listData" :key="item.id">
         <div class="col-xs-12 col-sm-3 col-md-2">
-          <img :src="websiteInfo.imageUrlPre + item.project_img" :alt="item.project_name">
+          <img :src="websiteInfo.imageUrlPre + item.project_img" style="width: 100%;" :alt="item.project_name">
         </div>
         <div class="col-xs-12 col-sm-7 col-md-8">
           <h4>{{ item.project_name }}</h4>
@@ -69,9 +69,9 @@ export default {
   box-sizing: border-box;
   padding: 20px;
 }
-.project-introduce>div>img {
+/* .project-introduce>div>img {
   width: 80%;
-}
+} */
 .project-item {
   box-sizing: border-box;
   padding: 20px 0;
@@ -114,7 +114,7 @@ export default {
 .project-item.row>:last-child{
   text-align: center;
 }
-.project-item>div>img{
+/* .project-item>div>img{
   width: 100%;
-}
+} */
 </style>
