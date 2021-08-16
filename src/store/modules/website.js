@@ -10,7 +10,7 @@ const website = {
       chart: 'organization_chart_1_hengban-zuo.jpg',
       management: {
         name: '管理委员会',
-        content: '由固件联盟下属开源工作组的核心成员组成，主要包括一下职责：',
+        content: '由固件联盟下属开源工作组的核心成员组成，主要包括以下职责：',
         responsibility: [
           '社区定位、路标',
           '关键成员提名、投票',
