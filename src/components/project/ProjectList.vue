@@ -4,7 +4,7 @@
       项目申请流程
     </div>
     <div class="project-introduce row">
-      <div class="project-introduce-img col-xs-12 col-sm-10 col-md-10" :style='"background: url(" + websiteInfo.imageUrlPre + projectInfo.introduce + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div>
+      <div class="project-introduce-img col-xs-12 col-sm-10 col-md-10" :style='"background: url(/static/image/" + projectInfo.introduce + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div>
       <!-- <div class="col-xs-12 col-sm-10 col-md-10">
         <img :src="websiteInfo.imageUrlPre + projectInfo.introduce" style="width:80%;" alt="项目申请流程图">
       </div> -->
@@ -15,7 +15,8 @@
     <div class="project-list" :data="projectInfo.listData">
       <div class="project-item row" v-for="item in projectInfo.listData" :key="item.id">
         <div class="col-xs-12 col-sm-4 col-md-2">
-          <div class="pro-img-div" :style='"background: url(" + websiteInfo.imageUrlPre + item.project_img + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div>
+          <div class="pro-img-div" :style='"background: url(/static/image/" + item.project_img + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div>
+          <!-- <div class="pro-img-div" :style='"background: url(" + websiteInfo.imageUrlPre + item.project_img + ");background-size: contain;background-repeat: no-repeat;background-position: center;"'></div> -->
           <!-- <img :src="websiteInfo.imageUrlPre + item.project_img" style="width: 100%;" :alt="item.project_name"> -->
         </div>
         <div class="col-xs-12 col-sm-6 col-md-8">

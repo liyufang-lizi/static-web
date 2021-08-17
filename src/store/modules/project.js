@@ -40,7 +40,7 @@ const project = {
         ]
       }, {
         id: 2,
-        project_img: 'eg_img_03.JPG',
+        project_img: 'eg_img_03.jpg',
         project_index: '项目序号-03',
         project_name: '测试数据-项目三',
         project_codebase: '',
