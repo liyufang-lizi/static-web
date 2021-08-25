@@ -74,7 +74,6 @@ export default {
     for (var i = 0; i < this.meetingInfo.meetingListData.length; i++) {
       this.markDate.push(this.meetingInfo.meetingListData[i].meetingDate)
     }
-    // console.log(this.ate)
   },
   methods: {
     changeDate (date) {
@@ -131,23 +130,18 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin: 6px 0;
-  /* border-top: 1px dashed lightslategray; */
-  /* border-bottom: 1px dashed lightslategray; */
 }
 .date-time {
   color: #657f8f;
   font-weight: 700;
-  /* border-right: 1px dashed lightslategray; */
 }
 .meeting-con-ite {
   display: flex;
   flex-direction: column;
-  /* border-left: 1px dashed lightslategray; */
 }
 .meeting-con-ite h4 {
   box-sizing: border-box;
   padding: 6px 0;
-  /* border-bottom: 1px dashed lightslategray; */
 }
 .meeting-con-ite p {
   box-sizing: border-box;

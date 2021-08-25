@@ -70,10 +70,13 @@
           <!-- <img :src="websiteInfo.imageUrlPre + organizationInfo.chart" alt="组织架构"> ‘已取消，改成了ann’ -->
           <div class="bg-btn-div">
             <div class="btndiv click-active" id="glwyh" title="管理委员会" @click="toShowCurrentClass('glwyh')">管理委员会</div>
-            <div class="btndiv" id="dmglz" title="代码管理组" @click="toShowCurrentClass('dmglz')">代码管理组</div>
+            <div class="btndiv" id="maintainer" title="Maintainer" @click="toShowCurrentClass('maintainer')">Maintainer</div>
+            <div class="btndiv" id="committer" title="Committer" @click="toShowCurrentClass('committer')">Committer</div>
+            <div class="btndiv" id="contributor" title="Contributor" @click="toShowCurrentClass('contributor')">Contributor</div>
+            <!-- <div class="btndiv" id="dmglz" title="代码管理组" @click="toShowCurrentClass('dmglz')">代码管理组</div>
             <div class="btndiv" id="jccsz" title="测试集成组" @click="toShowCurrentClass('jccsz')">测试集成组</div>
             <div class="btndiv" id="aqz" title="安全组" @click="toShowCurrentClass('aqz')">安全组</div>
-            <div class="btndiv" id="sqyyz" title="社区运营组" @click="toShowCurrentClass('sqyyz')">社区运营组</div>
+            <div class="btndiv" id="sqyyz" title="社区运营组" @click="toShowCurrentClass('sqyyz')">社区运营组</div> -->
           </div>
           <div class="btn-line">
             <div class="vertical-line"></div>
@@ -81,23 +84,55 @@
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
-            <div class="line"></div>
+            <!-- <div class="line"></div> -->
           </div>
 
         </div>
         <div class="col-xs-12 col-sm-7 col-md-8 organization-subs">
           <div class="glwyh subs-panel">
             <h5>管理委员会</h5>
-            <p>由固件联盟下属开源工作组的核心成员组成，主要包含以下职责：</p>
+            <p>由开源工作组的核心成员组成，主要包含以下职责：</p>
             <ol>
               <li>社区定位、路标</li>
               <li>关键成员提名、投票</li>
+              <li>定期召开会议</li>
               <li>需求/问题的排序</li>
               <li>关键技术方案和架构讨论决策</li>
               <li>分工决策</li>
             </ol>
-            <p>管理委员会定期收集提案系统中提交的议题，并召开线上会议进行讨论决策。</p>
           </div>
+          <div class="maintainer subs-panel">
+            <h5>Maintainer</h5>
+            <p>由项目的发起人承担，主要包含以下职责：</p>
+            <ol>
+              <li>技术路线规划</li>
+              <li>版本发布</li>
+              <li>开发活动协商</li>
+              <li>代码合入</li>
+            </ol>
+          </div>
+          <div class="committer subs-panel">
+            <h5>Committer</h5>
+            <p>由开发经验丰富或者对模块熟悉的成员承担，主要包含以下职责：</p>
+            <ol>
+              <li>功能开发</li>
+              <li>问题修复</li>
+              <li>代码检视</li>
+              <li>任务分发</li>
+            </ol>
+          </div>
+          <div class="contributor subs-panel">
+            <h5>Contributor</h5>
+            <p>由开源代码使用者和社区成员组成，主要包含以下职责：</p>
+            <ol>
+              <li>代码提交</li>
+              <li>问题上报</li>
+              <li>问题讨论</li>
+              <li>任务响应</li>
+            </ol>
+          </div>
+
+        <!--
           <div class="dmglz subs-panel">
             <h5>代码管理组</h5>
             <p>负责社区项目的开发和管理，保障开源项目的代码提交、检视、issue管理等日常操作的有序进行，同时负责输出项目的快速入门指南，帮助新人尽快熟悉项目，根据权限划分为以下三类角色：</p>
@@ -136,6 +171,7 @@
             <h5>社区运营组</h5>
             <p>负责社区基础设置的维护和日常运作，如社区门户网站内容的更新，培训和活动的策划、会议的组织、反馈意见的收集处理。</p>
           </div>
+        -->
         </div>
       </div>
     </div>
@@ -282,7 +318,7 @@ div#carousel-example-generic {
   background: rgb(230, 231, 230);
 }
 .bg-btn-div {
-  height: 406px;
+  height: 330px;
   position: absolute;
   top: 0;
   left: 0;
@@ -293,7 +329,7 @@ div#carousel-example-generic {
 }
 .organization-chart{
   padding: 0;
-  height: 406px;
+  height: 330px;
 }
 
 @media (max-width: 768px) {
@@ -325,7 +361,7 @@ div#carousel-example-generic {
   letter-spacing: 2px;
   word-spacing: 2px;
   line-height: 2em;
-  text-indent: 2em;
+  /* text-indent: 2em; */
   text-align: left;
 }
 .subs-panel p {
@@ -334,7 +370,7 @@ div#carousel-example-generic {
   letter-spacing: 2px;
   word-spacing: 2px;
   line-height: 2em;
-  text-indent: 2em;
+  /* text-indent: 2em; */
   text-align: left;
 }
 .subs-panel table {
@@ -370,7 +406,7 @@ div#carousel-example-generic {
   box-shadow: 0 0 18px 0 #507b9b;
 }
 .btndiv:nth-child(1){
-  top: 174px;
+  top: 129px;
   left: 20px;
 }
 .btndiv:nth-child(2){
@@ -396,7 +432,7 @@ div#carousel-example-generic {
 }
 .vertical-line {
   width: 0;
-  height: 284px;
+  height: 187px;
   border-right: 1px solid #507b9b;
   position: absolute;
   top: 54px;
@@ -419,7 +455,7 @@ div#carousel-example-generic {
 }
 .line:nth-child(4) {
   position: absolute;
-  top: 194px;
+  top: 147px;
   left: 150px;
 }
 .line:nth-child(5) {
