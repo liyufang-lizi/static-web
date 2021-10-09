@@ -7,12 +7,12 @@ const project = {
       listData: [{
         id: 0,
         project_img: 'eg_img_01.jpg', // 项目图片
-        project_index: '项目序号-01',
-        project_name: '测试数据-项目一',
+        project_index: '项目序号-01', // 项目序号
+        project_name: '测试数据-项目一', // 项目名称
         project_codebase: '', // 项目代码仓地址
         project_type: '', // 项目类型
         project_start: '', // 项目热度
-        project_intro: [
+        project_intro: [ // 段落信息等
           {
             id: 0,
             content: '段落标注-01'

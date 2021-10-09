@@ -253,14 +253,14 @@ export default {
   align-items: center;
 }
 .image-introduce-0 {
-  background: url('../../../static/image/eg_01.png') no-repeat 0 0;
+  background: url('../../../static/image/eg_01.jpg') no-repeat 0 0;
   background-size: 100% 100%;
 }
 .image-introduce-1 {
-  background: url('../../../static/image/about_community_introduce.png') no-repeat 0 0;
+  background: url('../../../static/image/about_community_introduce.jpg') no-repeat 0 0;
   background-size: 100% 100%;
 }.image-introduce-2 {
-  background: url('../../../static/image/eg_02.png') no-repeat 0 0;
+  background: url('../../../static/image/eg_02.jpg') no-repeat 0 0;
   background-size: 100% 100%;
 }
 .introduce-txt {

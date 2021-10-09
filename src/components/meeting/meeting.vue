@@ -150,7 +150,7 @@ export default {
 .meeting-banner{
   width: 100%;
   height: 280px;
-  background: url('../../../static/image/meeting-banner.png') no-repeat 0 0;
+  background: url('../../../static/image/meeting-banner.jpg') no-repeat 0 0;
   background-size: 100% 100%;
 }
 @media (max-width: 768px) {

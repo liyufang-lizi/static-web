@@ -59,7 +59,6 @@ export default {
 }
 @media (max-width: 768px) {
   .contain{
-    /* padding: 20px 0; */
     padding: 0;
   }
   .secction {

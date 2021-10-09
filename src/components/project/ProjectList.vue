@@ -31,7 +31,7 @@
   </div>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   data () {
@@ -72,9 +72,6 @@ export default {
   box-sizing: border-box;
   padding: 20px;
 }
-/* .project-introduce>div>img {
-  width: 80%;
-} */
 .project-item {
   box-sizing: border-box;
   padding: 20px 0;
@@ -123,7 +120,4 @@ export default {
 .project-item.row>:last-child{
   text-align: center;
 }
-/* .project-item>div>img{
-  width: 100%;
-} */
 </style>

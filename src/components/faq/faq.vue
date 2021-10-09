@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {}
@@ -49,11 +49,11 @@ export default {
     margin: 20px 0;
   }
 }
-.panel-heading{
+.panel-heading {
   font-size: 16px;
   font-weight: 700;
 }
-.panel-body>.panel-primary>.panel-body{
+.panel-body>.panel-primary>.panel-body {
   font-size: 1.6rem;
   letter-spacing: 2px;
   word-spacing: 2px;
